@@ -27,13 +27,17 @@ object rational_exercise{
         if (b == 0) a else gcd(b, a % b)
       s"${numer/gcd(numer.abs,denom)}/${denom/gcd(numer.abs,denom)}"
   end Rational
+ 
+  extension (x: Rational)
+    def + (y: Rational): Rational = x.add(y)
+    def * (y: Rational): Rational = y.mul(y)
   
   def main(args: Array[String]) = {
     val x = Rational(1, 3) 
     val y = Rational(-5, 7)
     val z = Rational(3, 2)
 
-    println(x.add(y).mul(z).toString)
+    println((x + y * z).toString)
     println(x.sub(y).sub(z).toString)
   }
 }
