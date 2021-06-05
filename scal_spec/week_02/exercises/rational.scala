@@ -1,6 +1,6 @@
 #!/bin/env /bin/scala3
 /**
- * A few definitions for working with rational numbers
+ * A few definitions for working with rational numbers.
  */
 
 object rational_exercise{
