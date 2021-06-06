@@ -8,6 +8,13 @@ object IntSet_exercise{
     def incl(x: Int): IntSet
     def contains(x: Int): Boolean
     def union(other: IntSet): IntSet
+  end IntSet
+
+  object IntSet:
+    def apply(): IntSet = Empty
+    def apply(x: Int) = Empty.incl(x)
+    def apply(x: Int, y: Int) = Empty.incl(x).incl(y)
+  end IntSet
   
   object Empty extends IntSet:
     def contains(x: Int): Boolean = false
@@ -27,10 +34,9 @@ object IntSet_exercise{
     def union(other: IntSet): IntSet =
       left.union(right).union(other).incl(elem)
   end NonEmpty
-
   
   def main(args: Array[String]): Unit = {
-    println("hello world!")
+    println(IntSet(2,3))
 
     }
 }
