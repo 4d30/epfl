@@ -1,6 +1,6 @@
 #!/bin/env /bin/scala3
 /**
- * A few definitions for working with Integer sets
+ * A few definitions for working with Integer sets.
  */
 
 object pme{
