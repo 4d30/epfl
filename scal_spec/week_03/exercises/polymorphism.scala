@@ -1,7 +1,9 @@
-#!/bin/env /bin/scala3
+#!/bin/env -S ./Nat.scala /bin/scala3 
 /**
  * A few definitions for working with Integer sets
  */
+
+import Nat._
 
 object polymorph_exercise{
   def nth[T](xs: List[T], n: Int): T = {
