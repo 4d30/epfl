@@ -6,7 +6,7 @@
 object colfun{
   def scalarProduct(xs: Vector[Double], ys: Vector[Double]): Double = 
     xs.zip(ys).map(_*_).sum
-  
+
   def isPrime(n: Int): Boolean =
     (2 until n).forall(n % _ != 0)
 
@@ -19,8 +19,7 @@ object colfun{
     val out2 = colfun.scalarProduct(xs, ys)
     val out3 = isPrime(173)
     println(out3)
-    
+ 
     }
 
 }
-
