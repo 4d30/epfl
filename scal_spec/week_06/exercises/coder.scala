@@ -1,0 +1,36 @@
+#!/bin/env /bin/scala3
+
+class Coder(words: List[String]):
+  val mnemonics = Map(
+    '2'-> "ABC",'3' -> "DEF", '4' -> "GHI",'5'-> "JKL",
+    '6' -> "MNO", '7' -> "PQRS", '8' -> "TUV", '9' ->"WXYZ")
+  
+  // Maps a letter yto the digit it represents
+  private val charCode: Map[Char, Char] = 
+    for
+      (digit, str) <- mnemonics
+      ltr <- str
+    yield ltr -> digit
+
+  // Maps a word to the digit string it can represent
+  private def wordCode(word: String): String = word.toUpperCase.map(charCode)
+
+  // Maps a digit string to all words in the dictionary that represent it 
+  private val wordsForNum: Map[String, List[String]] = words.groupBy(wordCode).withDefaultValue(Nil)
+
+  // All ways to encode a number as a list of words
+  def encode(number: String): Set[List[String]] = 
+    if number.isEmpty then Set(Nil)
+    else 
+      for
+        splitPoint <- (1 to number.length).toSet
+        word <- wordsForNum(number.take(splitPoint))
+        rest <- encode(number.drop(splitPoint))
+      yield word :: rest
+
+
+val dict = List("Scala", "Rocks", "Socks", "C", "Tcl", "Ruby", "works", "pack")
+
+def main(args: Array[String]): Unit =
+  println(Coder(dict).encode("72252"))
+
