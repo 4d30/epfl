@@ -129,24 +129,15 @@ object Anagrams extends AnagramsInterface:
    *  Note: the resulting value is an occurrence - meaning it is sorted
    *  and has no zero-entries.
    */
-  def subtract(x: Occurrences, y: Occurrences): Occurrences = 
+  def subtract(x: Occurrences, y: Occurrences): Occurrences = {
+    val yMap = y.toMap.withDefaultValue(0)
     for
       (xo, i) <- x
-      (yo, j) <- y
-      if ((xo == yo) && (i > j) || 
+      if (i - yMap(xo)) > 0
     yield
-      (xo, i-j)
+      (xo, i - yMap(xo))
+  }
    
-//   def subtractHelper(x: Occurrences, y: Occurrences, acc: Occurrences): Occurrences =
-//      x match {
-//      case Nil => acc
-//      case ox :: oxs => y match {
-//        case Nil => subtractHelper(oxs, 
-//        case oy :: oys => if ox._1 == oy._1 
-//                            then (ox._1, ox._2 - oy._2) :: 
-//    
-    
-
   /** Returns a list of all anagram sentences of the given sentence.
    *
    *  An anagram of a sentence is formed by taking the occurrences of all the characters of
@@ -187,7 +178,20 @@ object Anagrams extends AnagramsInterface:
    *
    *  Note: There is only one anagram of an empty sentence.
    */
-  def sentenceAnagrams(sentence: Sentence): List[Sentence] = ???
+
+  def sentenceAnagrams(sentence: Sentence): List[Sentence] = {
+    def saHelper(occurrences: Occurrences): List[Sentence] = occurrences match {
+      case Nil => List(Nil)
+      case occur =>
+        for 
+          combo <- combinations(occur)
+          word <- dictionaryByOccurrences(combo)
+          rest <- saHelper(subtract(occur, combo))
+        yield 
+          word :: rest
+    }
+    saHelper(sentenceOccurrences(sentence))
+  }
 
 object Dictionary:
   def loadDictionary: List[String] =
@@ -205,3 +209,4 @@ object Dictionary:
         throw e
     finally
       wordstream.close()
+
