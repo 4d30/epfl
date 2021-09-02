@@ -1,0 +1,4 @@
+[debug] [exercise] Classpath dependencies List()
+[debug] [exercise] Dependencies from configurations List()
+[debug] Bloop wrote the configuration of project 'exercise' to '/home/joey/github/epfl/scal_spec/fp_design/week_07/exercise/.bloop/exercise.json'
+[success] Generated .bloop/exercise.json

@@ -1,0 +1,94 @@
+[debug] > Exec(early(addDefaultCommands), None, None)
+[debug] > Exec(addDefaultCommands, None, None)
+[debug] > Exec(early(initialize), None, None)
+[debug] > Exec(initialize, None, None)
+[debug] > Exec(boot, None, None)
+[debug] > Exec(writeSbtVersion, None, None)
+[debug] > Exec(reload, None, None)
+[debug] > Exec(sbtStashOnFailure, None, None)
+[debug] > Exec(onFailure loadFailed, None, None)
+[debug] > Exec(loadp, None, None)
+[info] welcome to sbt 1.5.5 (Oracle Corporation Java 11.0.12)
+[debug] Load.defaultLoad until apply took 1154.487045ms
+[debug]                 Load.loadUnit: plugins took 313.900304ms
+[debug]                 Load.loadUnit: defsScala took 0.375763ms
+[debug] [Loading] Scanning directory /home/joey/github/epfl/scal_spec/fp_design/week_07/exercise/project/project
+[debug]                   Load.loadUnit: mkEval took 23.033571ms
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in /home/joey/github/epfl/scal_spec/fp_design/week_07/exercise/project/project, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 97.998492 ms
+[info] loading settings for project exercise-build-build from metals.sbt ...
+[debug]                     Load.resolveProject(exercise-build-build) took 165.784727ms
+[debug]                   Load.loadTransitive: finalizeProject(Project(id exercise-build-build, base: /home/joey/github/epfl/scal_spec/fp_design/week_07/exercise/project/project, plugins: List(<none>))) took 356.4934ms
+[debug] [Loading] Done in /home/joey/github/epfl/scal_spec/fp_design/week_07/exercise/project/project, returning: (exercise-build-build)
+[debug]                 Load.loadUnit: loadedProjectsRaw took 1451.798315ms
+[debug]                 Load.loadUnit: cleanEvalClasses took 19.483741ms
+[debug]               Load.loadUnit(file:/home/joey/github/epfl/scal_spec/fp_design/week_07/exercise/project/project/, ...) took 1802.159183ms
+[debug]             Load.apply: load took 2286.61367ms
+[debug]             Load.apply: resolveProjects took 26.341689ms
+[debug]             Load.apply: finalTransforms took 142.065185ms
+[debug]             Load.apply: config.delegates took 34.053344ms
+[debug]             Load.apply: Def.make(settings)... took 1463.515442ms
+[debug]             Load.apply: structureIndex took 355.955617ms
+[debug]             Load.apply: mkStreams took 2.068128ms
+[info] loading project definition from /home/joey/github/epfl/scal_spec/fp_design/week_07/exercise/project/project
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug]           Load.loadUnit: plugins took 8668.395123ms
+[debug]           Load.loadUnit: defsScala took 0.004481ms
+[debug] [Loading] Scanning directory /home/joey/github/epfl/scal_spec/fp_design/week_07/exercise/project
+[debug]             Load.loadUnit: mkEval took 10.046207ms
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in /home/joey/github/epfl/scal_spec/fp_design/week_07/exercise/project, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(bloop.integrations.sbt.BloopPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(bloop.integrations.sbt.BloopPlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,bloop.integrations.sbt.BloopPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 16.035207 ms
+[info] loading settings for project exercise-build from metals.sbt ...
+[debug]               Load.resolveProject(exercise-build) took 88.003472ms
+[debug]             Load.loadTransitive: finalizeProject(Project(id exercise-build, base: /home/joey/github/epfl/scal_spec/fp_design/week_07/exercise/project, plugins: List(<none>))) took 110.676429ms
+[debug] [Loading] Done in /home/joey/github/epfl/scal_spec/fp_design/week_07/exercise/project, returning: (exercise-build)
+[debug]           Load.loadUnit: loadedProjectsRaw took 136.270964ms
+[debug]           Load.loadUnit: cleanEvalClasses took 0.642586ms
+[debug]         Load.loadUnit(file:/home/joey/github/epfl/scal_spec/fp_design/week_07/exercise/project/, ...) took 8806.385218ms
+[debug]       Load.apply: load took 8814.790538ms
+[debug]       Load.apply: resolveProjects took 0.181917ms
+[debug]       Load.apply: finalTransforms took 59.875665ms
+[debug]       Load.apply: config.delegates took 0.782492ms
+[debug]       Load.apply: Def.make(settings)... took 324.307651ms
+[debug]       Load.apply: structureIndex took 76.803583ms
+[debug]       Load.apply: mkStreams took 0.003256ms
+[info] loading project definition from /home/joey/github/epfl/scal_spec/fp_design/week_07/exercise/project
+[debug] Evaluating tasks: bloopInstall
+[debug] Running task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@7ac058a0, check cycles: false, forcegc: true
+[success] Generated .bloop/exercise-build.json
+[success] Total time: 5 s, completed Aug 23, 2021, 3:18:27 PM
+[debug] Running task... Cancel: bloop.integrations.sbt.Offloader$$anon$1@5cce40d7, check cycles: false, forcegc: true
+[debug]     Load.loadUnit: plugins took 15217.665953ms
+[debug]     Load.loadUnit: defsScala took 0.00571ms
+[debug] [Loading] Scanning directory /home/joey/github/epfl/scal_spec/fp_design/week_07/exercise
+[debug]       Load.loadUnit: mkEval took 0.246522ms
